@@ -11,7 +11,9 @@ ft_strcmp:
 		xor rcx, rcx
 		mov cl, byte [rdi]
 		sub cl, byte [rsi]
-		jnz .return
+		cmp cl, 0
+		jl .meturn
+		jg .return
 		cmp byte [rdi], 0
 		je .return
 		inc rdi
@@ -19,9 +21,16 @@ ft_strcmp:
 		jmp .loop
 
 .return:
+		xor rax, rax
+		mov al, cl
+		pop rcx
+		ret
+
+.meturn:
 		neg cl
 		xor rax, rax
 		mov al, cl
+		neg eax
 		pop rcx
 		ret
 

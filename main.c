@@ -5,8 +5,8 @@ int main()
     int i = 0;
     int k = 0;
 
-    char lek[10] = "1234";
-    char lal[10] = "1239";
+    char lek[10] = "1253";
+    char lal[10] = "1253";
     char *knull = NULL;
     i = ft_strcmp(lek, lal);
     k = strcmp(lek, lal);
