@@ -2,14 +2,10 @@
 
 int main()
 {
-    int i = 0;
-    int k = 0;
+    char *kek;
+    char *asd = "shjsad123jhgkj";
 
-    char lek[20] = "1234";
-    char lal[10] = "s1";
-    char *knull = NULL;
-    knull = ft_strcpy(lal, lek);
-
-    printf("s1:%s\ns2:%s\n", lek, lal);
+    kek = ft_strdup(asd);
+    printf("s1:%s\ns2:%s\n", kek, asd);
     return(0);
 }
