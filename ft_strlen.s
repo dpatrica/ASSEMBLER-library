@@ -1,11 +1,12 @@
 global	_ft_strlen
 
 section .text
-ft_strlen:
+_ft_strlen:
 		push rcx
-		mov rcx, 0
+		mov rcx, -1
 		cmp rdi, 0
 		je .return
+		xor rcx, rcx
 
 .loop:
 		cmp byte [rdi + rcx], 0

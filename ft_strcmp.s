@@ -1,7 +1,7 @@
 global	_ft_strcmp
 
 section .text
-ft_strcmp:
+_ft_strcmp:
 		cmp rdi, 0
 		je .error
 		cmp rsi, 0

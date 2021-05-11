@@ -1,7 +1,7 @@
 global	_ft_strcpy
 
 section .text
-ft_strcpy:
+_ft_strcpy:
 		cmp rdi, 0
 		je .error
 		cmp rsi, 0
@@ -25,5 +25,5 @@ ft_strcpy:
 		ret
 
 .error:
-		mov rax, 0
+		xor rax, rax
 		ret

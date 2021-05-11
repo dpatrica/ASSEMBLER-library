@@ -1,14 +1,17 @@
 global	_ft_read
+extern ___error
 
 section .text
-ft_write:
-		mov rax, 0
+_ft_read:
+		mov rax, 0x2000003
 		syscall
-		cmp rax, 0
-		jl .error
+		jc .error
 		jmp .return
 
 .error:
+		push rax
+		call ___error
+		pop qword [rax]
 		mov rax, -1
 .return:
 		ret
