@@ -1,4 +1,4 @@
-global  ft_strlen
+global	_ft_strlen
 
 section .text
 ft_strlen:
